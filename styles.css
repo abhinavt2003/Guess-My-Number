@@ -7,16 +7,16 @@ html {
     max-width: 750px;
     min-width: 480px;
     margin: 0 auto;
-    background-color: #212121;
+    background-color: brown;
   }
   
   .lastResult {
-    color: white;
+    color: yellow;
     padding: 7px;
   }
   
   .guesses {
-    color: white;
+    color: yellow;
     padding: 7px;
   }
   
