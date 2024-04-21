@@ -1,18 +1,18 @@
 let randomNumber=parseInt(Math.random()*100 +1)
 const submit=document.querySelector('#subt')
-const userInput=document.querySelector('#guessField')
-const guessSlot=document.querySelector('.guesses')
-const remaining=document.querySelector('.lastResult')
-const lowOrHi= document.querySelector('.lowOrHi')
-const startOver=document.querySelector('.resultParas')
+const userInput=document.querySelector('#guessField')  //It will tell us what user has input
+const guessSlot=document.querySelector('.guesses')      //Will tell you what you have guessed previously
+const remaining=document.querySelector('.lastResult')   //Remaining guesses
+const lowOrHi= document.querySelector('.lowOrHi')       //Entered value is lower or higher
+const startOver=document.querySelector('.resultParas')  //Game is over and you want to start a new game
 
-const p= document.createElement('p')
+const p= document.createElement('p')      //Paragraph element to append at the end when starting a new game
 
 
-let prevGuess= []
-let numGuesses= 1
+let prevGuess= []    //Stores previous guesses
+let numGuesses= 1     //Number of guesses you already have
 
-let playGame= true
+let playGame= true   //You want to play the game
 
 if(playGame){
   submit.addEventListener('click',function(e){
