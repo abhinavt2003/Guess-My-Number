@@ -1,5 +1,4 @@
 let randomNumber=parseInt(Math.random()*100 +1)
-'use strict';
 const submit=document.querySelector('#subt')
 const userInput=document.querySelector('#guessField')  //It will tell us what user has input
 const guessSlot=document.querySelector('.guesses')      //Will tell you what you have guessed previously
@@ -36,7 +35,7 @@ function validateGuess(guess){
   }
   else{
     prevGuess.push(guess)
-    if(numGuesses ==10){
+    if(numGuesses ==11){
       displayGuess(guess)
       displayMessage(`Game over. Random number was ${randomNumber}`)
       endGame()
@@ -67,7 +66,7 @@ function displayGuess(guess){
   userInput.value= ""
   guessSlot.innerHTML += `${guess} `
   numGuesses++;
-  remaining.innerHTML= `${10-numGuesses}`
+  remaining.innerHTML= `${11-numGuesses}`
 }
 
 function displayMessage(message){
@@ -76,9 +75,15 @@ function displayMessage(message){
   lowOrHi.innerHTML= `<h2>${message}</h2>`
 }
 
+// startnewgame
+// when numGuesses = 10 toggle the hidden class from the button
+
+
+
+
 function endGame(){
   //Game khtm ho gya
-  userInput.value= ""
+  userInput.value= ''
   userInput.setAttribute('disabled','') //disabled key value pair me set hota hai
   p.classList.add('button')
   p.innerHTML= `<h2 id="newGame">Start new game</h2>`
@@ -95,7 +100,7 @@ function newGame(){
     prevGuess= []
     numGuesses=1
     guessSlot.innerHTML= ''
-    remaining.innerHTML= `${10-numGuesses}`
+    remaining.innerHTML= `${11-numGuesses}`
     userInput.removeAttribute('disabled')
     startOver.removeChild(p)
     playGame=true

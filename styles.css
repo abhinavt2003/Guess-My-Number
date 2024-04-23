@@ -9,27 +9,40 @@ html {
     margin: 0 auto;
     background-color: brown;
   }
-  
+  .header{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 24px;
+  }
   .lastResult {
     color: yellow;
     padding: 7px;
   }
-  
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  label#guess{
+    font-size: 20px;
+  }
   .guesses {
     color: yellow;
     padding: 7px;
   }
   
-  button {
-    background-color: #141414;
+  .button {
+    background-color: #797979;
     color: #fff;
-    width: 250px;
-    height: 50px;
-    border-radius: 25px;
-    font-size: 30px;
-    border-style: none;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     /* margin-left: 50px; */
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 4px 0;
+    box-shadow: 3px 4px 4px rgba(#fff, #fff, #fff, .4);
   }
   
   #subt {
@@ -40,7 +53,6 @@ html {
     border-radius: 10px;
     font-size: 20px;
     border-style: none;
-    margin-top: 50px;
     /* margin-left: 75px; */
   }
   
@@ -50,7 +62,6 @@ html {
     height: 50px;
     font-size: 30px;
     border-style: none;
-    margin-top: 25px;
   
     /* margin-left: 50px; */
     border: 5px solid #6c6d6d;
@@ -60,7 +71,7 @@ html {
   #guess {
     font-size: 55px;
     /* margin-left: 90px; */
-    margin-top: 120px;
+    margin-top: 40px;
     color: #fff;
   }
   
@@ -90,3 +101,15 @@ html {
     text-align: center;
   }
   
+
+  /* new game button
+  .new-game{
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 3px 4px 4px rgba(#fff, #fff, #fff, .4);
+    border-radius: 12px;
+  } */
+  .hidden{
+    display: none;
+  }
